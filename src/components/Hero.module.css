@@ -1,0 +1,79 @@
+/* Hero.module.css */
+
+
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 2em;
+  background-color: #fddfd4;
+  font-family: sans-serif;
+}
+
+.heroText {
+  max-width: 50%;
+}
+
+.heroText h1 {
+  font-size: 2.5em;
+  color: #173f35;
+  margin-bottom: 1em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6em 1.5em;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.shopBtn {
+  background-color: #004A2F;
+  color: white;
+}
+
+.heroCircle {
+  width: 250px;
+  height: 250px;
+  background-color: #f35e2c;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canImage {
+  width: 100px;
+  transform: rotate(15deg);
+  object-fit: contain;
+  border-left: 5px solid #f35e2c;
+  box-shadow: -10px 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .heroText {
+    max-width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .canImage {
+    width: 100px;
+    transform: rotate(15deg);
+  }
+
+  .heroCircle {
+    width: 250px;
+    height: 250px;
+  }
+}

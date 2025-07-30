@@ -1,0 +1,143 @@
+/* Footer.module.css */
+
+ .footer {
+  background: #FDF9F2;
+  padding: 70px 30px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 10px auto ;
+  align-items: flex-start;
+}
+
+.footer-signup {
+  flex: 1;
+  min-width: 900px;
+  margin-bottom: 70px;
+}
+
+.logo-title-row {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* 20px Adjust the radius value as needed */
+}
+
+.footer-signup .logo {
+  width: 40px;
+  margin-bottom: -190px; /* -180 Adjust the radius value as needed */
+  border-radius: 40px; /* Adjust the radius value as needed */
+  margin-left: 65px;
+}
+
+.footer-title {
+  font-weight: bold;
+  color: #1E1E1E;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: -13px; /* 17px move it downward */
+  margin-bottom: -200px; /* -180px move it downward */
+}
+
+
+
+.email-subscribe-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  padding: 70px;
+}
+
+.email-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.email-subscribe input[type="email"] {
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.email-subscribe .btn {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 0;
+  background-color: #004A2F;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  gap: 40px;
+  flex: 2;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.footer-links div {
+  min-width: 140px;
+}
+
+.footer-links h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1E1E1E;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color:  #004A2F;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+.subscribeBanner {
+  background: #FCE8F6;
+  padding: 24px;
+  text-align: left;
+  border-radius: 7px;
+  width: 100%;
+  max-width: 800px;
+  margin: 60px auto -70px auto;
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+/* Headings and Paragraphs */
+.subscribeBanner h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #1E1E1E;
+}
+
+.subscribeBanner p {
+  font-size: 1rem;
+  margin: 0 0 20px;
+  color: #333;
+}
+/* CTA Button */
+.btn {
+  display: inline-block;
+  background-color: #004A2F;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #006644;
+}
+

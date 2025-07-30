@@ -1,0 +1,102 @@
+/* Flavors.module.css */
+
+/* Section Layout */
+.flavorSection {
+  text-align: center;
+  padding: 2em 1em;
+  font-family: sans-serif;
+}
+
+.flavorSection h2 {
+  font-size: 2em;
+  margin-bottom: 0.2em;
+}
+
+.flavorSection p {
+  color: #555;
+  margin-bottom: 2em;
+}
+
+/* Cards Container */
+.flavorCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+/* Individual Card */
+.flavorCard {
+  width: 190px;
+  height: 350px;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1em;
+  position: relative;
+  color: #333;
+  text-align: center;
+}
+
+/* Image inside flavor card */
+.flavorImg {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 1em;
+}
+
+/* Flavor Titles */
+.flavorCard h3 {
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+}
+
+/* Shared Price Tag Base Styles */
+.price {
+  color: #fff;
+  padding: 0.3em 0.7em;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+/* Unique Colors for Each Flavor */
+.priceGinger {
+  background-color: #f4a261;
+}
+
+.priceGrape {
+  background-color: #9b5de5;
+}
+
+.priceOrange {
+  background-color: #ff751a;
+}
+
+.pricePunch {
+  background-color: #f94144;
+}
+
+/* Background Colors for Each Card */
+.ginger {
+  background-color: #f4e1b5;
+}
+
+.grape {
+  background-color: #d6c4ec;
+}
+
+.orange {
+  background-color: #f7d8c3;
+}
+
+.punch {
+  background-color: #c6ebdd;
+}
+
+
+
