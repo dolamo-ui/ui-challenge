@@ -1,7 +1,5 @@
 /* Hero.module.css */
 
-
-
 .hero {
   display: flex;
   justify-content: space-between;
@@ -9,10 +7,17 @@
   padding: 2em 2em;
   background-color: #fddfd4;
   font-family: sans-serif;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .heroText {
   max-width: 50%;
+  min-width: 300px;
+  flex: 1;
+  box-sizing: border-box;
 }
 
 .heroText h1 {
@@ -20,6 +25,7 @@
   color: #173f35;
   margin-bottom: 1em;
   font-family: "Times New Roman", Times, serif;
+  line-height: 1.2;
 }
 
 .btn {
@@ -28,6 +34,9 @@
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .shopBtn {
@@ -44,6 +53,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 1em;
 }
 
 .canImage {
@@ -55,11 +65,13 @@
   border-radius: 10px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ✅ Tablets and small laptops */
+@media (max-width: 992px) {
   .hero {
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    padding: 2em 1.5em;
   }
 
   .heroText {
@@ -67,13 +79,66 @@
     margin-bottom: 2em;
   }
 
-  .canImage {
-    width: 100px;
-    transform: rotate(15deg);
+  .heroText h1 {
+    font-size: 2em;
   }
 
   .heroCircle {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
+  }
+
+  .canImage {
+    width: 90px;
+  }
+}
+
+/* ✅ Mobile devices (<= 576px) */
+@media (max-width: 576px) {
+  .hero {
+    padding: 1.5em 1em;
+  }
+
+  .heroText h1 {
+    font-size: 1.7em;
+  }
+
+  .btn {
+    font-size: 0.95em;
+    padding: 0.5em 1.2em;
+  }
+
+  .heroCircle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .canImage {
+    width: 80px;
+  }
+}
+
+/* ✅ Extra small devices (<= 375px) */
+@media (max-width: 375px) {
+  .hero {
+    padding: 1.2em 0.8em;
+  }
+
+  .heroText h1 {
+    font-size: 1.5em;
+  }
+
+  .btn {
+    font-size: 0.9em;
+    padding: 0.5em 1em;
+  }
+
+  .heroCircle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .canImage {
+    width: 70px;
   }
 }

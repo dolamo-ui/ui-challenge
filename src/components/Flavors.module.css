@@ -1,10 +1,13 @@
-/* Flavors.module.css */
+
 
 /* Section Layout */
 .flavorSection {
   text-align: center;
   padding: 2em 1em;
   font-family: sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .flavorSection h2 {
@@ -15,6 +18,7 @@
 .flavorSection p {
   color: #555;
   margin-bottom: 2em;
+  font-size: 1em;
 }
 
 /* Cards Container */
@@ -23,6 +27,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5em;
+  box-sizing: border-box;
 }
 
 /* Individual Card */
@@ -38,6 +43,12 @@
   position: relative;
   color: #333;
   text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.flavorCard:hover {
+  transform: translateY(-5px);
 }
 
 /* Image inside flavor card */
@@ -62,6 +73,7 @@
   border-radius: 999px;
   font-weight: bold;
   font-size: 0.9em;
+  margin-bottom: 0.5em;
 }
 
 /* Unique Colors for Each Flavor */
@@ -98,5 +110,76 @@
   background-color: #c6ebdd;
 }
 
+/* ----------------------------- */
+/* ✅ Responsive Breakpoints */
+/* ----------------------------- */
 
+/* Tablets (<= 992px) */
+@media (max-width: 992px) {
+  .flavorCard {
+    width: 170px;
+    height: 330px;
+  }
 
+  .flavorSection h2 {
+    font-size: 1.8em;
+  }
+
+  .flavorSection p {
+    font-size: 0.95em;
+  }
+}
+
+/* Mobile Phones (<= 576px) */
+@media (max-width: 576px) {
+  .flavorCard {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    padding: 1em 1.5em;
+  }
+
+  .flavorSection h2 {
+    font-size: 1.6em;
+  }
+
+  .flavorSection p {
+    font-size: 0.9em;
+  }
+
+  .flavorCard h3 {
+    font-size: 1em;
+  }
+
+  .price {
+    font-size: 0.85em;
+  }
+}
+
+/* Extra Small Devices (<= 375px) */
+@media (max-width: 375px) {
+  .flavorSection {
+    padding: 1.5em 0.5em;
+  }
+
+  .flavorCard {
+    max-width: 100%;
+    padding: 1em;
+  }
+
+  .flavorImg {
+    max-height: 160px;
+  }
+
+  .flavorSection h2 {
+    font-size: 1.4em;
+  }
+
+  .flavorSection p {
+    font-size: 0.85em;
+  }
+
+  .price {
+    font-size: 0.8em;
+  }
+}

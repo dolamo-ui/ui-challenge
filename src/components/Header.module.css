@@ -1,4 +1,4 @@
-/* Basic container layout */
+/* Base container layout */
 .container {
   display: flex;
   justify-content: space-between;
@@ -6,7 +6,9 @@
   max-width: 1900px;
   margin: 6px auto;
   padding: 0 9px;
-  width: 70%;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 /* Logo styling */
@@ -21,14 +23,16 @@
 .nav {
   display: flex;
   gap: 2em;
+  flex-wrap: wrap;
 }
 
 /* Navigation link styling */
 .navLink {
   color: #333;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);  /* Responsive font size */
   transition: color 0.3s ease;
+  word-break: break-word;
 }
 
 .navLink:hover {
@@ -37,13 +41,17 @@
 
 /* Button styling */
 .btn {
-  padding: 0.3em 1.9em;; /* 0.9em 1.9em Button styling */
+  padding: 0.5em 1.5em;
   border: none;
   cursor: pointer;
   text-decoration: none;
   font-weight: bold;
   border-radius: 34px;
   transition: background-color 0.3s ease;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);  /* Responsive font size */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .subscribeBtn {
@@ -56,68 +64,88 @@
 }
 
 
+/* Responsive Breakpoints */
 
-/* Media Queries for responsiveness */
+/* Medium screens: tablets, small laptops */
 @media (max-width: 1200px) {
   .container {
-    width: 80%; /* Slightly wider for medium screens */
+    width: 90%;
   }
 
   .logo img {
-    height: 35px; /* Reduce logo size */
+    height: 28px;
   }
 
   .nav {
-    gap: 1em;
+    gap: 1.2em;
   }
 
   .btn {
-    padding: 0.5em 1.6em; /* Adjust button padding */
+    padding: 0.5em 1.4em;
   }
 }
 
+/* Small screens: large phones, tablets portrait */
 @media (max-width: 768px) {
   .container {
-    width: 90%; /* More width for smaller screens */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center everything */
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   .logo img {
-    height: 30px; /* Even smaller logo */
+    height: 26px;
   }
 
   .nav {
-    flex-direction: column; /* Stack navigation links vertically */
-    gap: 1em;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8em;
+    margin: 1em 0;
   }
 
   .navLink {
-    font-size: 1.1rem; /* Slightly larger text on small screens */
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
   }
 
   .btn {
-    padding: 0.6em 1.5em; /* Adjust button padding */
-    font-size: 1rem; /* Adjust button text size */
+    padding: 0.6em 1.3em;
   }
 }
 
+/* Extra small devices: small phones */
 @media (max-width: 480px) {
   .container {
-    width: 95%; /* Full width for very small screens */
+    width: 95%;
   }
 
   .logo img {
-    height: 25px; /* Even smaller logo */
+    height: 24px;
   }
 
   .navLink {
-    font-size: 1rem; /* Adjust font size */
+    font-size: clamp(0.95rem, 3vw, 1rem);
   }
 
   .btn {
-    width: 60%; /* Full-width button */
-    padding: 0.6em 1.4em; /* Adjust padding for touch devices */
+    width: 100%;
+    padding: 0.6em 1em;
+    font-size: clamp(0.9rem, 3vw, 0.95rem);
+  }
+}
+
+/* Ultra small screens: <= 360px */
+@media (max-width: 360px) {
+  .navLink {
+    font-size: clamp(0.85rem, 4vw, 0.95rem);
+  }
+
+  .btn {
+    padding: 0.5em 0.9em;
+    font-size: clamp(0.85rem, 4vw, 0.9rem);
+  }
+
+  .logo img {
+    height: 22px;
   }
 }
